@@ -21,3 +21,10 @@ puts "Creating Jobs"
 Job.create(employer: google, title: "Software Engineer", location: "New York, NY", category: "Software Engineering", summary: "Entry-level Software Engineer - Sample Summary", description: "Sample description blah blah blah", sal_range_low: 50000, sal_range_high: 70000, active: true)
 Job.create(employer: facebook, title: "Software Developer", location: "San Francisco, CA", category: "Software Engineering", summary: "Summary for a software engineer job at facebook", description: "Another Another Sample description blah blah blah", sal_range_low: 70000, sal_range_high: 90000, active: true)
 Job.create(employer: google, title: "Junior Data Scientist", location: "Pittsburgh, PA", category: "Data Science", summary: "Data Scientist job summary", description: "Sample description for data science job blah blah blah", sal_range_low: 20000, sal_range_high: 50000, active: true)
+
+
+puts "Destroying all Users"
+User.destroy_all
+
+puts "Creating Users"
+User.create(first_name: "Jonah", last_name: "Offitzer", email: "joffitzer@gmail.com", bootcamp: "Flatiron School", category: "Software Engineering", grad_month: 2, grad_year: 2020)

@@ -8337,3 +8337,2090 @@ Processing by Api::V1::EmployersController#index as */*
 Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.5ms | Allocations: 3662)
 
 
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:11:16 -0500
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:11:16 -0500
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::JobsController#index as */*
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mJob Load (12.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 77ms (Views: 32.1ms | ActiveRecord: 33.3ms | Allocations: 23219)
+
+
+Completed 200 OK in 91ms (Views: 33.1ms | ActiveRecord: 46.1ms | Allocations: 25400)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:11:16 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 1.6ms | Allocations: 3668)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:11:18 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 1.6ms | Allocations: 4574)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:11:21 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 1.8ms | Allocations: 3681)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:11:22 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 1.9ms | Allocations: 4574)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:12:16 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 1.6ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:12:18 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (7.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 6.2ms | ActiveRecord: 8.5ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:12:20 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (3.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 3.8ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:12:30 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (4.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 5.5ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:12:40 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:12:41 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (4.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 4.9ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:12:46 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 3.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:12:53 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 2.1ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:12:54 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (2.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 4.0ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:13:01 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 1.4ms | Allocations: 4558)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:13:07 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 2.9ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:13:12 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 1.8ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:13:39 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 1.0ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:13:48 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.4ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:13:49 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 2.1ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:14:05 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (16.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 10.7ms | ActiveRecord: 18.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:14:31 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 2.3ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:14:32 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 1.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:14:38 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.3ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:14:40 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (5.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 10.6ms | ActiveRecord: 7.2ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:14:43 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 3.1ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:14:47 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 1.8ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:14:51 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 1.1ms | Allocations: 4556)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:14:53 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.7ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:14:55 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (8.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 8.5ms | ActiveRecord: 10.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:14:57 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (3.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 4.7ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:15:13 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.3ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:15:14 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 2.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:15:17 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.9ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:24:36 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 2.6ms | Allocations: 3792)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:24:37 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 4.9ms | Allocations: 4558)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:24:41 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:27:24 -0500
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 75ms (Views: 49.5ms | ActiveRecord: 14.6ms | Allocations: 20392)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:27:39 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 3.1ms | Allocations: 4754)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:27:40 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 3.4ms | Allocations: 4577)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:27:45 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (4.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 12.2ms | ActiveRecord: 6.1ms | Allocations: 4574)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:27:48 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 2.8ms | Allocations: 4574)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:27:51 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 1.9ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:28:08 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (3.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 10.5ms | ActiveRecord: 5.7ms | Allocations: 3663)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:31:10 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 2.0ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:31:15 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 3.0ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:31:20 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 1.1ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:31:24 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (3.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 4.0ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:31:26 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 3.0ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:31:27 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 1.6ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:31:28 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 2.8ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:31:29 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (2.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (8.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 11.3ms | ActiveRecord: 12.0ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:31:30 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 3.2ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:31:33 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 1.1ms | Allocations: 4556)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 12:31:37 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 2.5ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 12:31:38 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (4.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 9.6ms | ActiveRecord: 6.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 13:10:49 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 2.2ms | Allocations: 3792)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 13:11:38 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (47.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 58ms (Views: 8.8ms | ActiveRecord: 49.2ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 13:11:44 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 2.5ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:11:44 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 2.0ms | Allocations: 4558)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:11:48 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 1.7ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:12:21 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (7.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 10.1ms | ActiveRecord: 10.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 13:12:25 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.1ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:12:27 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 3.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:12:54 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (11.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 12.7ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 13:13:12 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 1.0ms | Allocations: 3665)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:13:14 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (3.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (3.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 11.6ms | ActiveRecord: 7.4ms | Allocations: 4555)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 13:13:26 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 1]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 2]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 1.8ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:13:27 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 2.3ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:13:30 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (4.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 5.2ms | Allocations: 4555)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:34:11 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 11.5ms | ActiveRecord: 4.2ms | Allocations: 4685)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:35:36 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 71ms (Views: 38.2ms | ActiveRecord: 22.2ms | Allocations: 17795)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7447664202155697660)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200129185100)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "bootcamp" character varying, "grad_month" integer, "grad_year" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200129185100"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7447664202155697660)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEmployer Load (0.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Destroy (5.0ms)[0m  [1m[31mDELETE FROM "employers" WHERE "employers"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "jobs" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTruncate Tables (42.0ms)[0m  [1m[35mTRUNCATE TABLE "employers", "jobs", "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "jobs" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEmployer Load (1.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Create (1.0ms)[0m  [1m[32mINSERT INTO "employers" ("name", "description", "logo", "industry", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Google"], ["description", "Google Description"], ["logo", "https://banner2.cleanpng.com/20180419/evq/kisspng-google-logo-google-search-google-account-redes-5ad81f9d785f93.4350404715241133094931.jpg"], ["industry", "Tech"], ["created_at", "2020-01-29 18:55:34.892943"], ["updated_at", "2020-01-29 18:55:34.892943"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Create (0.4ms)[0m  [1m[32mINSERT INTO "employers" ("name", "description", "logo", "industry", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Facebook"], ["description", "Facebook Description"], ["logo", "https://banner2.cleanpng.com/20180419/evq/kisspng-google-logo-google-search-google-account-redes-5ad81f9d785f93.4350404715241133094931.jpg"], ["industry", "Tech"], ["created_at", "2020-01-29 18:55:34.900413"], ["updated_at", "2020-01-29 18:55:34.900413"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "location", "category", "summary", "description", "sal_range_low", "sal_range_high", "active", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Software Engineer"], ["location", "New York, NY"], ["category", "Software Engineering"], ["summary", "Entry-level Software Engineer - Sample Summary"], ["description", "Sample description blah blah blah"], ["sal_range_low", 50000], ["sal_range_high", 70000], ["active", true], ["employer_id", 3], ["created_at", "2020-01-29 18:55:34.936429"], ["updated_at", "2020-01-29 18:55:34.936429"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "location", "category", "summary", "description", "sal_range_low", "sal_range_high", "active", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Software Developer"], ["location", "San Francisco, CA"], ["category", "Software Engineering"], ["summary", "Summary for a software engineer job at facebook"], ["description", "Another Another Sample description blah blah blah"], ["sal_range_low", 70000], ["sal_range_high", 90000], ["active", true], ["employer_id", 4], ["created_at", "2020-01-29 18:55:34.947524"], ["updated_at", "2020-01-29 18:55:34.947524"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "location", "category", "summary", "description", "sal_range_low", "sal_range_high", "active", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Junior Data Scientist"], ["location", "Pittsburgh, PA"], ["category", "Data Science"], ["summary", "Data Scientist job summary"], ["description", "Sample description for data science job blah blah blah"], ["sal_range_low", 20000], ["sal_range_high", 50000], ["active", true], ["employer_id", 3], ["created_at", "2020-01-29 18:55:34.958757"], ["updated_at", "2020-01-29 18:55:34.958757"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "bootcamp", "grad_month", "grad_year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Jonah"], ["last_name", "Offitzer"], ["email", "joffitzer@gmail.com"], ["bootcamp", "Flatiron School"], ["grad_month", 2], ["grad_year", 2020], ["created_at", "2020-01-29 18:55:34.990425"], ["updated_at", "2020-01-29 18:55:34.990425"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-01-29 13:56:57 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 29.6ms | Allocations: 316)
+Completed 200 OK in 59ms (Views: 42.8ms | ActiveRecord: 0.0ms | Allocations: 1605)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 13:57:00 -0500
+Processing by Api::V1::JobsController#index as HTML
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 78ms (Views: 50.3ms | ActiveRecord: 18.1ms | Allocations: 20493)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 13:57:02 -0500
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 9.1ms | Allocations: 8359)
+
+
+  
+NoMethodError (undefined method `title' for #<User:0x00007fee66eb6340>):
+  
+app/controllers/api/v1/users_controller.rb:5:in `index'
+Started GET "/api/v1/users" for ::1 at 2020-01-29 13:57:40 -0500
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 10.3ms | ActiveRecord: 6.8ms | Allocations: 6837)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7447664202155697660)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200129185100)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200129185100"]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7447664202155697660)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7447664202155697660)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200129185100)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "bootcamp" character varying, "category" character varying, "grad_month" integer, "grad_year" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200129185100"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7447664202155697660)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "jobs" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTruncate Tables (39.7ms)[0m  [1m[35mTRUNCATE TABLE "users", "employers", "jobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "jobs" ENABLE TRIGGER ALL[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEmployer Load (0.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Create (0.8ms)[0m  [1m[32mINSERT INTO "employers" ("name", "description", "logo", "industry", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Google"], ["description", "Google Description"], ["logo", "https://banner2.cleanpng.com/20180419/evq/kisspng-google-logo-google-search-google-account-redes-5ad81f9d785f93.4350404715241133094931.jpg"], ["industry", "Tech"], ["created_at", "2020-01-29 18:59:03.491300"], ["updated_at", "2020-01-29 18:59:03.491300"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Create (0.5ms)[0m  [1m[32mINSERT INTO "employers" ("name", "description", "logo", "industry", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Facebook"], ["description", "Facebook Description"], ["logo", "https://banner2.cleanpng.com/20180419/evq/kisspng-google-logo-google-search-google-account-redes-5ad81f9d785f93.4350404715241133094931.jpg"], ["industry", "Tech"], ["created_at", "2020-01-29 18:59:03.498599"], ["updated_at", "2020-01-29 18:59:03.498599"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (1.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "location", "category", "summary", "description", "sal_range_low", "sal_range_high", "active", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Software Engineer"], ["location", "New York, NY"], ["category", "Software Engineering"], ["summary", "Entry-level Software Engineer - Sample Summary"], ["description", "Sample description blah blah blah"], ["sal_range_low", 50000], ["sal_range_high", 70000], ["active", true], ["employer_id", 5], ["created_at", "2020-01-29 18:59:03.556862"], ["updated_at", "2020-01-29 18:59:03.556862"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "location", "category", "summary", "description", "sal_range_low", "sal_range_high", "active", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Software Developer"], ["location", "San Francisco, CA"], ["category", "Software Engineering"], ["summary", "Summary for a software engineer job at facebook"], ["description", "Another Another Sample description blah blah blah"], ["sal_range_low", 70000], ["sal_range_high", 90000], ["active", true], ["employer_id", 6], ["created_at", "2020-01-29 18:59:03.568952"], ["updated_at", "2020-01-29 18:59:03.568952"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "location", "category", "summary", "description", "sal_range_low", "sal_range_high", "active", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Junior Data Scientist"], ["location", "Pittsburgh, PA"], ["category", "Data Science"], ["summary", "Data Scientist job summary"], ["description", "Sample description for data science job blah blah blah"], ["sal_range_low", 20000], ["sal_range_high", 50000], ["active", true], ["employer_id", 5], ["created_at", "2020-01-29 18:59:03.580092"], ["updated_at", "2020-01-29 18:59:03.580092"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "bootcamp", "category", "grad_month", "grad_year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Jonah"], ["last_name", "Offitzer"], ["email", "joffitzer@gmail.com"], ["bootcamp", "Flatiron School"], ["category", "Software Engineering"], ["grad_month", 2], ["grad_year", 2020], ["created_at", "2020-01-29 18:59:03.617603"], ["updated_at", "2020-01-29 18:59:03.617603"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/users" for ::1 at 2020-01-29 13:59:10 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 10.1ms | ActiveRecord: 8.9ms | Allocations: 7990)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:29:15 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (10.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (16.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 5]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 6]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 159ms (Views: 87.5ms | ActiveRecord: 54.5ms | Allocations: 19783)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:29:21 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 1.9ms | Allocations: 4973)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:29:35 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 5]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 6]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 1.9ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:29:37 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 5]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 6]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 2.0ms | Allocations: 3681)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:29:39 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 1.5ms | Allocations: 4607)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:29:40 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.6ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:29:41 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (4.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 5]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 6]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 5.1ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:29:43 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (6.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 5]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 6]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 7.1ms | ActiveRecord: 8.4ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:29:44 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 3.2ms | Allocations: 4588)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "jobs" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTruncate Tables (38.6ms)[0m  [1m[35mTRUNCATE TABLE "users", "employers", "jobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "jobs" ENABLE TRIGGER ALL[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEmployer Load (1.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Create (0.9ms)[0m  [1m[32mINSERT INTO "employers" ("name", "description", "logo", "industry", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Google"], ["description", "Google Description"], ["logo", "https://banner2.cleanpng.com/20180419/evq/kisspng-google-logo-google-search-google-account-redes-5ad81f9d785f93.4350404715241133094931.jpg"], ["industry", "Tech"], ["created_at", "2020-01-29 19:30:19.098158"], ["updated_at", "2020-01-29 19:30:19.098158"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Create (0.4ms)[0m  [1m[32mINSERT INTO "employers" ("name", "description", "logo", "industry", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Facebook"], ["description", "Facebook Description"], ["logo", "https://banner2.cleanpng.com/20180419/evq/kisspng-google-logo-google-search-google-account-redes-5ad81f9d785f93.4350404715241133094931.jpg"], ["industry", "Tech"], ["created_at", "2020-01-29 19:30:19.106047"], ["updated_at", "2020-01-29 19:30:19.106047"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (2.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "location", "category", "summary", "description", "sal_range_low", "sal_range_high", "active", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Software Engineer"], ["location", "New York, NY"], ["category", "Software Engineering"], ["summary", "Entry-level Software Engineer - Sample Summary"], ["description", "Sample description blah blah blah"], ["sal_range_low", 50000], ["sal_range_high", 70000], ["active", true], ["employer_id", 7], ["created_at", "2020-01-29 19:30:19.154147"], ["updated_at", "2020-01-29 19:30:19.154147"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Create (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "location", "category", "summary", "description", "sal_range_low", "sal_range_high", "active", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Software Developer"], ["location", "San Francisco, CA"], ["category", "Software Engineering"], ["summary", "Summary for a software engineer job at facebook"], ["description", "Another Another Sample description blah blah blah"], ["sal_range_low", 70000], ["sal_range_high", 90000], ["active", true], ["employer_id", 8], ["created_at", "2020-01-29 19:30:19.166793"], ["updated_at", "2020-01-29 19:30:19.166793"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "location", "category", "summary", "description", "sal_range_low", "sal_range_high", "active", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Junior Data Scientist"], ["location", "Pittsburgh, PA"], ["category", "Data Science"], ["summary", "Data Scientist job summary"], ["description", "Sample description for data science job blah blah blah"], ["sal_range_low", 20000], ["sal_range_high", 50000], ["active", true], ["employer_id", 7], ["created_at", "2020-01-29 19:30:19.179338"], ["updated_at", "2020-01-29 19:30:19.179338"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "bootcamp", "category", "grad_month", "grad_year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Jonah"], ["last_name", "Offitzer"], ["email", "joffitzer@gmail.com"], ["bootcamp", "Flatiron School"], ["category", "Software Engineering"], ["grad_month", 2], ["grad_year", 2020], ["created_at", "2020-01-29 19:30:19.227299"], ["updated_at", "2020-01-29 19:30:19.227299"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:01 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (2.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 117ms (Views: 75.3ms | ActiveRecord: 27.8ms | Allocations: 20213)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:03 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 1.3ms | Allocations: 4973)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:06 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (3.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 4.6ms | Allocations: 3681)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:07 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 1.1ms | Allocations: 4608)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:10 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 2.4ms | Allocations: 3681)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:12 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 2.0ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:15 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (5.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 12.1ms | ActiveRecord: 8.5ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:15 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (2.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 3.0ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:17 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (5.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 6.6ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:20 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 2.7ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:22 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (3.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 4.8ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:27 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 2.6ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:29 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.5ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:32 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (4.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 5.3ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:36 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (5.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 6.1ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:37 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (6.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 9.6ms | ActiveRecord: 6.9ms | Allocations: 3665)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:38 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 1.7ms | Allocations: 4591)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:39 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 2.9ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:47 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 3.4ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:31:50 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (14.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 10.1ms | ActiveRecord: 15.6ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:31:50 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 3.3ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:32:38 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (2.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 3.3ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:32:39 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 3.0ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:32:43 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 2.2ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:32:44 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 3.2ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:32:46 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 1.4ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:32:49 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (2.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 3.1ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:33:09 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 2.1ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:33:10 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 1.4ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:33:11 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 2.0ms | Allocations: 3665)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 14:50:58 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 2.0ms | Allocations: 3792)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:51:01 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 3.6ms | Allocations: 4591)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 14:51:08 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 2.8ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:06:24 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 2.3ms | Allocations: 3792)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:06:25 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.8ms | Allocations: 4591)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:06:27 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (2.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 4.2ms | Allocations: 3662)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:18:28 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 53ms (Views: 11.6ms | ActiveRecord: 37.5ms | Allocations: 7537)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:18:46 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 8.7ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:19:07 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:19:26 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:20:32 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (34.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 37ms (Views: 2.3ms | ActiveRecord: 34.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:20:51 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.2ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:20:54 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.6ms | Allocations: 964)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:21:00 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 1.0ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:21:05 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:21:08 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:21:36 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 2.3ms | ActiveRecord: 14.7ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:21:53 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:22:04 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:22:15 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:23:42 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:24:16 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:24:37 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:24:53 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:25:13 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.7ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:25:15 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 2.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:25:20 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:25:25 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:25:27 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:25:34 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 6.1ms | Allocations: 961)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:25:38 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 3.9ms | Allocations: 3719)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:25:40 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (3.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 8.8ms | ActiveRecord: 5.0ms | Allocations: 4591)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:25:40 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 2.1ms | Allocations: 3662)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:27:57 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 961)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:28:00 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (3.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 4.8ms | Allocations: 3662)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:28:11 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (1.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 2.0ms | Allocations: 3662)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:28:14 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:28:16 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 1.2ms | Allocations: 3665)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:28:16 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 1.3ms | Allocations: 4588)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:28:17 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.3ms | Allocations: 3662)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:28:18 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.2ms | Allocations: 961)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:28:19 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (2.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 3.9ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:28:20 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (7.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 8.3ms | ActiveRecord: 9.3ms | Allocations: 4588)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:31:57 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:32:04 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:33:27 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 3.5ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:37:01 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.0ms | Allocations: 961)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:37:04 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (1.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 2.5ms | Allocations: 3662)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:37:06 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.9ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:37:09 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 2.0ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:37:14 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (2.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 3.6ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:37:16 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 1.4ms | Allocations: 4588)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:37:45 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 961)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-29 15:37:57 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.7ms | Allocations: 961)
+
+
+Started GET "/api/v1/employers" for ::1 at 2020-01-29 15:38:04 -0500
+Processing by Api::V1::EmployersController#index as */*
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 7]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."employer_id" = $1[0m  [["employer_id", 8]]
+  ↳ app/controllers/api/v1/employers_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 1.0ms | Allocations: 3665)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:38:06 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 2.3ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:38:10 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 1.8ms | Allocations: 4588)
+
+
+Started GET "/api/v1/jobs" for ::1 at 2020-01-29 15:38:15 -0500
+Processing by Api::V1::JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mEmployer Load (1.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+  [1m[36mCACHE Employer Load (0.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/jobs_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 3.1ms | Allocations: 4588)
+
+
