@@ -27,4 +27,11 @@ puts "Destroying all Users"
 User.destroy_all
 
 puts "Creating Users"
-User.create(first_name: "Jonah", last_name: "Offitzer", email: "joffitzer@gmail.com", bootcamp: "Flatiron School", category: "Software Engineering", grad_month: 2, grad_year: 2020)
+jonah = User.create(first_name: "Jonah", last_name: "Offitzer", email: "joffitzer@gmail.com", bootcamp: "Flatiron School", category: "Software Engineering", grad_month: 2, grad_year: 2020)
+
+
+puts "Destroying all Portfolio Items"
+PortfolioItem.destroy_all 
+
+puts "Creating Portfolio Items"
+PortfolioItem.create(user: jonah, title: "launchpad", blurb: "a job-searching app for bootcamp grads", git_url: "samplegiturl.com")
