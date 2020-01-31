@@ -10,6 +10,16 @@ class Api::V1::PortfolioItemsController < ApplicationController
         render json: portfolioItem, except: [:created_at, :updated_at]
     end 
 
+    def update 
+        portfolioItem = PortfolioItem.find(params[:id])
+        portfolioItem.update(portfolio_item_params)
+        render json: portfolioItem, except: [:created_at, :updated_at]
+    end 
+
+    def destroy
+        PortfolioItem.destroy(params[:id])
+    end 
+
 end
 
 private
