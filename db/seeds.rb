@@ -35,3 +35,4 @@ PortfolioItem.destroy_all
 
 puts "Creating Portfolio Items"
 PortfolioItem.create(user: jonah, title: "launchpad", blurb: "a job-searching app for bootcamp grads", git_url: "samplegiturl.com")
+PortfolioItem.create(user: jonah, title: "rate my rental", blurb: "a yelp-style review app for apartment buildings and landlords", git_url: "samplegiturl.com")
