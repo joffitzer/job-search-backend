@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_29_212216) do
+ActiveRecord::Schema.define(version: 2020_01_31_154657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(version: 2020_01_29_212216) do
     t.index ["user_id"], name: "index_portfolio_items_on_user_id"
   end
 
+  create_table "user_apps", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "job_id"
+    t.text "mini_cl"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["job_id"], name: "index_user_apps_on_job_id"
+    t.index ["user_id"], name: "index_user_apps_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -63,4 +73,6 @@ ActiveRecord::Schema.define(version: 2020_01_29_212216) do
 
   add_foreign_key "jobs", "employers"
   add_foreign_key "portfolio_items", "users"
+  add_foreign_key "user_apps", "jobs"
+  add_foreign_key "user_apps", "users"
 end

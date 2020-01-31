@@ -18,9 +18,9 @@ puts "Destroying all Jobs"
 Job.destroy_all
 
 puts "Creating Jobs"
-Job.create(employer: google, title: "Software Engineer", location: "New York, NY", category: "Software Engineering", summary: "Entry-level Software Engineer - Sample Summary", description: "Sample description blah blah blah", sal_range_low: 50000, sal_range_high: 70000, active: true)
-Job.create(employer: facebook, title: "Software Developer", location: "San Francisco, CA", category: "Software Engineering", summary: "Summary for a software engineer job at facebook", description: "Another Another Sample description blah blah blah", sal_range_low: 70000, sal_range_high: 90000, active: true)
-Job.create(employer: google, title: "Junior Data Scientist", location: "Pittsburgh, PA", category: "Data Science", summary: "Data Scientist job summary", description: "Sample description for data science job blah blah blah", sal_range_low: 20000, sal_range_high: 50000, active: true)
+google_job_one = Job.create(employer: google, title: "Software Engineer", location: "New York, NY", category: "Software Engineering", summary: "Entry-level Software Engineer - Sample Summary", description: "Sample description blah blah blah", sal_range_low: 50000, sal_range_high: 70000, active: true)
+facebook_job_one = Job.create(employer: facebook, title: "Software Developer", location: "San Francisco, CA", category: "Software Engineering", summary: "Summary for a software engineer job at facebook", description: "Another Another Sample description blah blah blah", sal_range_low: 70000, sal_range_high: 90000, active: true)
+google_job_two = Job.create(employer: google, title: "Junior Data Scientist", location: "Pittsburgh, PA", category: "Data Science", summary: "Data Scientist job summary", description: "Sample description for data science job blah blah blah", sal_range_low: 20000, sal_range_high: 50000, active: true)
 
 
 puts "Destroying all Users"
@@ -36,3 +36,10 @@ PortfolioItem.destroy_all
 puts "Creating Portfolio Items"
 PortfolioItem.create(user: jonah, title: "launchpad", blurb: "a job-searching app for bootcamp grads", git_url: "samplegiturl.com")
 PortfolioItem.create(user: jonah, title: "rate my rental", blurb: "a yelp-style review app for apartment buildings and landlords", git_url: "samplegiturl.com")
+
+
+puts "Destroying all User Apps"
+UserApp.destroy_all
+
+puts "Creating User Apps"
+UserApp.create(user: jonah, job: google_job_one, mini_cl: "mini cover letter example blah blah blah")
