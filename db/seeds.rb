@@ -33,9 +33,9 @@ jonah = User.create(first_name: "Jonah", last_name: "Offitzer", email: "joffitze
 puts "Destroying all Portfolio Items"
 PortfolioItem.destroy_all 
 
-puts "Creating Portfolio Items"
-PortfolioItem.create(user: jonah, title: "launchpad", blurb: "a job-searching app for bootcamp grads", git_url: "samplegiturl.com")
-PortfolioItem.create(user: jonah, title: "rate my rental", blurb: "a yelp-style review app for apartment buildings and landlords", git_url: "samplegiturl.com")
+# puts "Creating Portfolio Items"
+# PortfolioItem.create(user: jonah, title: "launchpad", blurb: "a job-searching app for bootcamp grads", git_url: "samplegiturl.com")
+# PortfolioItem.create(user: jonah, title: "rate my rental", blurb: "a yelp-style review app for apartment buildings and landlords", git_url: "samplegiturl.com")
 
 
 puts "Destroying all User Apps"
