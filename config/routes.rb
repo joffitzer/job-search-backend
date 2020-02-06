@@ -24,4 +24,9 @@ Rails.application.routes.draw do
       resources :employers
     end
   end
+  namespace :api do
+    namespace :v1 do
+      get '/autologin', to: "auth#create"
+    end
+  end
 end

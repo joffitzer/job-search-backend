@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for applying! 
+    <%
+=begin%>
+ <%= @user.name %></h1> 
+<%
+=end%>
+    <p>
+      You have successfully applied to _____.<br>
+    </p>
+    <p>
+      <%
+=begin%>
+ To view your applications, just follow this link: <%= @url %>. 
+<%
+=end%>
+    </p>
+    <p>Thanks for using launchpad and have a great day!</p>
+  </body>
+</html>

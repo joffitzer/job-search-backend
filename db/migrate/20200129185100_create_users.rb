@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :category
       t.integer :grad_month
       t.integer :grad_year
+      t.string :password_digest
 
       t.timestamps
     end
