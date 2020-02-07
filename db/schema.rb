@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2020_01_31_154657) do
   enable_extension "plpgsql"
 
   create_table "employers", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
     t.string "name"
     t.string "description"
     t.string "logo"
