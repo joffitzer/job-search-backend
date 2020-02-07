@@ -26,8 +26,8 @@ google_job_two = Job.create(employer: google, title: "Junior Data Scientist", lo
 puts "Destroying all Users"
 User.destroy_all
 
-puts "Creating Users"
-jonah = User.create(first_name: "Jonah", last_name: "Offitzer", email: "joffitzer@gmail.com", bootcamp: "Flatiron School", category: "Software Engineering", grad_month: 2, grad_year: 2020)
+# puts "Creating Users"
+# jonah = User.create(first_name: "Jonah", last_name: "Offitzer", email: "joffitzer@gmail.com", bootcamp: "Flatiron School", category: "Software Engineering", grad_month: 2, grad_year: 2020)
 
 
 puts "Destroying all Portfolio Items"
@@ -41,5 +41,5 @@ PortfolioItem.destroy_all
 puts "Destroying all User Apps"
 UserApp.destroy_all
 
-puts "Creating User Apps"
-UserApp.create(user: jonah, job: google_job_one, mini_cl: "mini cover letter example blah blah blah")
+# puts "Creating User Apps"
+# UserApp.create(user: jonah, job: google_job_one, mini_cl: "mini cover letter example blah blah blah")
