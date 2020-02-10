@@ -10,6 +10,10 @@ class Api::V1::JobsController < ApplicationController
         render json: job, except: [:created_at, :updated_at]
     end 
 
+    def destroy
+        Job.destroy(params[:id])
+    end 
+
     private
     def job_params
         params.require(:job).permit(:employer_id, :title, :location, :category, :summary, :description, :sal_range_low, :sal_range_high, :active)
