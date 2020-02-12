@@ -9,7 +9,7 @@
 puts "Destroying all Employers"
 Employer.destroy_all
 
-puts "Creating Employers"
+# puts "Creating Employers"
 # google = Employer.create(name: "Google", description: "Google Description", logo: "https://banner2.cleanpng.com/20180419/evq/kisspng-google-logo-google-search-google-account-redes-5ad81f9d785f93.4350404715241133094931.jpg", industry: "Tech")
 # facebook = Employer.create(name: "Facebook", description: "Facebook Description", logo: "https://banner2.cleanpng.com/20180419/evq/kisspng-google-logo-google-search-google-account-redes-5ad81f9d785f93.4350404715241133094931.jpg", industry: "Tech")
 
@@ -17,7 +17,7 @@ puts "Creating Employers"
 puts "Destroying all Jobs"
 Job.destroy_all
 
-puts "Creating Jobs"
+# puts "Creating Jobs"
 # google_job_one = Job.create(employer: google, title: "Software Engineer", location: "New York, NY", category: "Software Engineering", summary: "Entry-level Software Engineer - Sample Summary", description: "Sample description blah blah blah", sal_range_low: 50000, sal_range_high: 70000, active: true)
 # facebook_job_one = Job.create(employer: facebook, title: "Software Developer", location: "San Francisco, CA", category: "Software Engineering", summary: "Summary for a software engineer job at facebook", description: "Another Another Sample description blah blah blah", sal_range_low: 70000, sal_range_high: 90000, active: true)
 # google_job_two = Job.create(employer: google, title: "Junior Data Scientist", location: "Pittsburgh, PA", category: "Data Science", summary: "Data Scientist job summary", description: "Sample description for data science job blah blah blah", sal_range_low: 20000, sal_range_high: 50000, active: true)
