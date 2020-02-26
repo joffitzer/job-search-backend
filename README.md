@@ -1,24 +1,18 @@
-# README
+## Launchpad
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For my final project at Flatiron School, I chose to build Launchpad — a web application built exclusively for bootcamp <br />
+graduates, as well as employers who are interested in hiring from the steady stream of engineers that bootcamps produce.<br />
 
-Things you may want to cover:
+### Demo
 
-* Ruby version
+To view a full walkthrough of this app's functionality, please watch [this video demo](https://youtu.be/oKNprwQphf4).
 
-* System dependencies
+### Technologies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+React JS Frontend<br />
+Redux<br />
+Ruby on Rails API — [link to repository](https://github.com/joffitzer/job-search-backend)<br />
+Fast JSON API<br />
+EmailJS<br />
+Bootstrap<br />
+Custom CSS<br />
